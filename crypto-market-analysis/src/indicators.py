@@ -19,3 +19,7 @@ sns.heatmap(
 )
 
 plt.show()
+
+volatility = returns.std() * (365 ** 0.5)
+
+print(volatility)
