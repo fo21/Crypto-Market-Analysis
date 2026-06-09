@@ -4,4 +4,8 @@ prices = load_data()
 
 returns = prices.pct_change().dropna()
 
-returns.describe()
+print(returns.describe())
+
+corr = returns.corr()
+
+print(corr)
