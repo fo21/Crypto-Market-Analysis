@@ -1,3 +1,6 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 from data_loader import load_data
 
 prices = load_data()
@@ -9,3 +12,10 @@ print(returns.describe())
 corr = returns.corr()
 
 print(corr)
+
+sns.heatmap(
+    corr,
+    annot=True
+)
+
+plt.show()
