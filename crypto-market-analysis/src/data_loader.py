@@ -15,10 +15,12 @@ def load_data():
         start="2020-01-01",
         progress=False
     )
+    btc_close = btc[("Close", "BTC-USD")]
+    eth_close = eth[("Close", "ETH-USD")]
 
     prices = pd.DataFrame({
-        "BTC": btc["Close"],
-        "ETH": eth["Close"]
+        "BTC": btc_close,
+        "ETH": eth_close
     })
 
     return prices
